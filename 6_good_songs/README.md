@@ -1,6 +1,4 @@
-## Note
-
-In this case, the source sounds files:
+**Note**. In this case, the source sound files:
  
     $ ls -l ~/Desktop/MBARI/Soundscape/HumpbackSong_6_good_songs/
     ... 35M Feb 14  2018 HBSe_20161221T010133.wav
@@ -42,8 +40,11 @@ In this case, the source sounds files:
 
 ## Codebook generation
     
-    $ vq.learn -P 36 -e 0.0005 data/predictors/HumpbackSong_6_good_songs/*prd
+    
+With the 6 files, this amounts to 268,686 training vectors.
      
+    $ vq.learn -P 36 -e 0.0005 data/predictors/HumpbackSong_6_good_songs/*.prd
+
 Plot the general evaluation:
 
     $ cb.plot_evaluation.py data/codebooks/_/eps_0.0005.rpt.csv
