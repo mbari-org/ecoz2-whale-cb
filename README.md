@@ -23,6 +23,7 @@ In short, the steps followed in each exercise below are:
 
 ### Exercises
 
+- [6_good_songs](6_good_songs/README.md)
 - [HBSe_20161221T010133](HBSe_20161221T010133/README.md)
 - [HBSe_20170128T231621](HBSe_20170128T231621/README.md)
 
