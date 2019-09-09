@@ -1,15 +1,16 @@
-# LPC Based K-Means Clustering on Whale Vocalizations
+# LPC Based Analysis and Clustering on Humpback Whale Vocalizations
 
-> Note: all generated data and plots are committed to this repository.
-> See the setup section below if you want to reproduce the exercises.
+> Note: All plots are committed to this repository, but, because of their
+> large size, not all source sound files or generated data.
+> See the setup section below if you want to reproduce the experiments.
 
-The exercises described here follow Juang et al (1982) for the implementation 
+The experiments described here follow Juang et al (1982) for the implementation 
 of the algorithm for codebook generation as well as in terms of corresponding
 evaluation based on distortion performance. 
 A general overview of LPC can be found on [wikipedia](https://en.wikipedia.org/wiki/Linear_predictive_coding).
 In our case, we are exploring this technique for clustering of whale sounds.
 
-In short, the steps followed in each exercise below are:
+In short, the steps followed in each experiment below are:
 
 - LPC analysis to generate training vectors for clustering from a given
   whale sound file. This generates a single "predictor" file containing
@@ -21,11 +22,12 @@ In short, the steps followed in each exercise below are:
   the clusters and centroids based on the first couple of
   reflection coefficients associated with the prediction coefficients.
 
-### Exercises
+### experiments
 
-- [6_good_songs](6_good_songs/README.md)
 - [HBSe_20161221T010133](HBSe_20161221T010133/README.md)
 - [HBSe_20170128T231621](HBSe_20170128T231621/README.md)
+- [6_good_songs](6_good_songs/README.md)
+- [MARS_20161221_000046_SongSession_16kHz_HPF5Hz](MARS_20161221_000046_SongSession_16kHz_HPF5Hz/README.md)
 
 ## Setup
 
