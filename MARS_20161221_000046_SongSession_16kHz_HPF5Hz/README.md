@@ -90,7 +90,3 @@ Similar reflection coefficient inspection but now with 3 coefficients:
     df_codebook points = 1024
 
 ![](cb_kkk_training_8000_codebook_1024.png)
-
-## Cell shapes
-
-See [P2/README.md](P2/README.md).
