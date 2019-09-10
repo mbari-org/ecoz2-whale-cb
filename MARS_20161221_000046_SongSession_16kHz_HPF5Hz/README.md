@@ -3,6 +3,8 @@
     532M ~/Downloads/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.wav
  
 is located outside of this repository.
+This sound has a 50 Db amplification (using Audicity) wrt to the one provided.
+
 Also, the generated data is for the moment *not* included in the repo; 
 only included are the resulting plots as referenced in this page. 
  
@@ -24,6 +26,18 @@ only included are the resulting plots as referenced in this page.
 Plot general evaluation:
 
     $ cb.plot_evaluation.py data/codebooks/_/eps_0.0005.rpt.csv
+           M  passes     DDprm          σ       inertia
+    0      2       9  0.386237   1.258410  2.628891e+06
+    1      4      11  0.287822   2.472050  2.102332e+06
+    2      8      17  0.233958   3.860611  1.814950e+06
+    3     16      18  0.200205   5.168959  1.664952e+06
+    4     32      18  0.171203   7.026399  1.554185e+06
+    5     64      14  0.151517   8.694152  1.488529e+06
+    6    128      17  0.137004  10.754301  1.444406e+06
+    7    256      15  0.126080  12.613927  1.412817e+06
+    8    512      14  0.117340  14.281844  1.388907e+06
+    9   1024      14  0.109883  15.773080  1.369188e+06
+    10  2048      14  0.103179  17.328352  1.351842e+06
 
 ![](cb_evaluation.png)    
 
@@ -78,9 +92,10 @@ M=512:
 
 ![](cb_kk_training_8000_codebook_512.png)
 
-Similar reflection coefficient inspection but now with 3 coefficients:
+Similar reflection coefficient inspection but now with 3 coefficients,
+and with the M=1024 codebook:
     
-    $ prd.show -k -r 1-3 data/predictors/_/HBSe_20170128T231621.prd > data/predictors/_/HBSe_20170128T231621.prd.kkk.csv
+    $ prd.show -k -r 1-3 data/predictors/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.prd > kkk.csv
     
     $ cb.show -r 1-3 data/codebooks/_/eps_0.0005_M_1024.cbook > data/codebooks/_/eps_0.0005_M_1024.cbook.kkk.csv
     
