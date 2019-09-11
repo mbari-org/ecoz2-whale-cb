@@ -1,0 +1,2 @@
+fswatch -0 lpckw.{tex,bib} Makefile lpc.pdf clustering.pdf \
+       | xargs -0 -I {} make

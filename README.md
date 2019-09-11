@@ -1,14 +1,19 @@
 # LPC Based Analysis and Clustering on Humpback Whale Vocalizations
 
-> Note: All plots are committed to this repository, but, because of their
-> large size, not all source sound files or generated data.
+> Note: All plots are committed to this repository, but not all 
+> source sound files or generated data due to their large size.
 > See the setup section below if you want to reproduce the experiments.
 
-The experiments described here follow Juang et al (1982) for the implementation 
+The experiments described here mainly follow Juang et al (1982) for the implementation 
 of the algorithm for codebook generation as well as in terms of corresponding
 evaluation based on distortion performance. 
-A general overview of LPC can be found on [wikipedia](https://en.wikipedia.org/wiki/Linear_predictive_coding).
+A summary of key relevant background including LPC analysis and clustering
+can be found [here](bg/lpckw.pdf).
 In our case, we are exploring this technique for clustering of whale sounds.
+The reported experiments are initial steps toward the more general goal
+of possibly conforming a basis for development of a whale vocalization 
+classification at the sub-unit level 
+informed by and including comparison with similar efforts in the community. 
 
 In short, the steps followed in each experiment below are:
 
