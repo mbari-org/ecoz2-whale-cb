@@ -3,7 +3,7 @@
     532M ~/Downloads/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.wav
  
 is located outside of this repository.
-This sound has a 50 Db amplification (using Audicity) wrt to the one provided.
+This sound has a 50 Db amplification (using Audacity) wrt to the one provided.
 
 Also, the generated data is for the moment *not* included in the repo; 
 only included are the resulting plots as referenced in this page. 
