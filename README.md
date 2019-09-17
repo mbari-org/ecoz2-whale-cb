@@ -27,12 +27,23 @@ In short, the steps followed in each experiment below are:
   the clusters and centroids based on the first couple of
   reflection coefficients associated with the prediction coefficients.
 
-### experiments
+### Experiments
 
 - [HBSe_20161221T010133](HBSe_20161221T010133/README.md)
+  (38,265 training vectors).
+  
 - [HBSe_20170128T231621](HBSe_20170128T231621/README.md)
+  (77,034 training vectors).
+  Includes visualization of cluster shapes.
+  
 - [6_good_songs](6_good_songs/README.md)
+  (268,686 training vectors).
+  Includes visualization of cluster shapes.
+
 - [MARS_20161221_000046_SongSession_16kHz_HPF5Hz](MARS_20161221_000046_SongSession_16kHz_HPF5Hz/README.md)
+  (1,108,820 training vectors from a single 4.5-hour recording).
+  Includes visualization of codeword assignments on selected intervals having
+  regions that are acoustically and visually (via spectrogram) similar.
 
 ## Setup
 

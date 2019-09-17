@@ -41,13 +41,7 @@ Plot general evaluation:
 
 ![](cb_evaluation.png)    
 
-Cell cardinality and distortions for M=1024:
-    
-    $ cb.plot_cards_dists.py data/codebooks/_/eps_0.0005_M_1024.cbook.cards_dists.csv
-        
-![](cb_cards_dists.png)
-
-As a scatter plot:
+Cell cardinality and distortions for M=1024 as a scatter plot:
 
     $ cb.plot_cards_dists.py --scatter data/codebooks/_/eps_0.0005_M_1024.cbook.cards_dists.csv
 
@@ -105,3 +99,37 @@ and with the M=1024 codebook:
     df_codebook points = 1024
 
 ![](cb_kkk_training_8000_codebook_1024.png)
+
+## Codebook assignment visualization
+
+Selected intervals done by visually inspecting the spectrogram of the input 
+signal using Audacity.
+Each desired interval is defined by a start time (wrt to beginning of the file),
+e.g., `2h0.941s` (2 hours and 0.941 seconds), and a duration e.g., `4.057s`.
+
+Each of the following plots consists of:
+
+- Spectrogram of the selected interval.
+- Corresponding codeword per time window displayed with an arbitrary color mapping. 
+  The intent here is to have an idea about the codeword assignment over time
+  while expecting to see some similarity when comparing regions with similar acoustic content.
+- Corresponding distortion per time window.
+
+(Note: the axes of the codeword and distortion subplots are in terms of the
+window index, but aligned with the time axis of the spectrogram subplot.) 
+
+Two similar regions within (2h0.941s, +4.057s):
+
+    $ sgn.select.py --mindists data/codebooks/_/eps_0.0005_M_0512.cbook.min_dists.csv \
+      --signal ~/Downloads/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.wav \
+      --plot 2h0.941s 4.057s
+
+![](spectrogram_and_quantization_M_512_2h0.941s_4.057s.png)
+
+Two other similar regions within (2h56m9.64s +4.183s):
+
+    $ sgn.select.py --mindists data/codebooks/_/eps_0.0005_M_0512.cbook.min_dists.csv \
+      --signal ~/Downloads/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.wav \
+      --plot 2h56m9.64s 4.183s
+
+![](spectrogram_and_quantization_M_512_2h56m9.64s_4.183s.png)
