@@ -133,3 +133,11 @@ Two other similar regions within (2h56m9.64s +4.183s):
       --plot 2h56m9.64s 4.183s
 
 ![](spectrogram_and_quantization_M_512_2h56m9.64s_4.183s.png)
+
+A larger interval (1h55m1.162s, +18.038s):
+
+    $ sgn.select.py --mindists data/codebooks/_/eps_0.0005_M_0512.cbook.min_dists.csv \
+      --signal ~/Downloads/MARS_20161221_000046_SongSession_16kHz_HPF5Hz/MARS_20161221_000046_SongSession_16kHz_HPF5Hz.wav \
+      --plot 1h55m1.162s 18.038s
+
+![](spectrogram_and_quantization_M_512_1h55m1.162s_18.038s.png)
