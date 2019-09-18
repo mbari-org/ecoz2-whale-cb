@@ -347,6 +347,42 @@
         \label{fig:cb_kkk_training_8000_codebook_1024}.
     \end{figure}
 
+    \subsection*{Codeword assignment visualization}
+
+    The goal here is to color-map the assigned codewords over time while expecting to
+    see some similarity when comparing regions with similar acoustic content.
+    \
+    Intervals were selected by visually inspecting the spectrogram of the input signal
+    using Audacity.\footnote{
+        \url{https://www.audacityteam.org}
+    }
+    Each desired interval is defined by a start time (wrt to beginning of the file),
+    e.g., \verb|2h0.941s| (2 hours and 0.941 seconds), and a duration e.g., \verb|4.057s|.
+
+    Each of the plots generated for this purpose consists of:
+
+    \begin{itemize}
+        \item Spectrogram of the selected interval.
+        \item Corresponding codeword per time window displayed with an arbitrary color mapping.
+        \item Corresponding distortion per time window.
+    \end{itemize}
+
+    With quantization against a $M=512$ codebook,
+    Fig.\,\ref{fig:spectrogram_and_quantization_M_512} is an example of one of these plots.
+    \
+    \begin{figure}[!ht]
+        % spectrogram_and_quantization_M_512.png is a symlink to ../MARS_20161221_000046_SongSession_16kHz_HPF5Hz/spectrogram_and_quantization_M_512_2h56m9.64s_4.183s.png
+        % this due to stupid latex error about not recognizing the .64s_4.183s.png file extension!
+        \centering
+        \includegraphics[width=0.6\textwidth]{spectrogram_and_quantization_M_512.png}
+        \caption{
+            Example of codeword assignment visualization for a particular time interval.
+            In general, similar coloring is expected to be observed for similar spectrogram features.
+            (The axes of the codeword and distortion subplots are in terms of the
+            window index, but aligned with the time axis of the spectrogram subplot.)
+        }
+        \label{fig:spectrogram_and_quantization_M_512}
+    \end{figure}
 
     \clearpage
     \bibliographystyle{unsrt}
